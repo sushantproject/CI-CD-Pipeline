@@ -6,6 +6,26 @@
 
 ![](files/sagemaker_model_deploy.png)
 
+**Evaluation Logs**
+```json
+
+{"multiclass_classification_metrics": {"accuracy": {"value": 0.9056666493415833, "standard_deviation": "0"}, "confusion_matrix": {"buildings": 24.94279146194458, "forest": 33.122363686561584, "glacier": 31.28390610218048, "mountain": 28.57142984867096, "sea": 31.568628549575806, "street": 31.736525893211365}}}
+```
+**Training Logs S3 screenshot**
+![](files/sagemaker_tensorboard_logs.png)
+
+**Hparams Yaml**
+```yaml
+learning_rate: 1.2e-05
+lr: 1.2e-05
+model_name: regnetz_c16
+num_classes: 6
+optimizer_name: ADAM
+
+```
+
+
+
 Finally, the deployed endpoints
 ![](files/sagemaker_endpoints_sucess.png)
 
@@ -122,7 +142,7 @@ def predict_fn(input_object, model):
 
 ```
 
-You can see the detail experiment on drift detection on this ![notebook](notebooks/newdriftdetectiononline.ipynb)
+You can see the detail experiment on drift detection on this [notebook](notebooks/newdriftdetectiononline.ipynb)
 
 
 **Deployment Test on some test images**
@@ -131,9 +151,3 @@ The result in [notebooks/05-test-staging.ipynb](notebooks/05-test-staging.ipynb)
 **Output Logs**
 Here is screenshot of output logs during prediction on cloud watch:
 ![](files/prediction_result_deployment.png)
-
-
-## Complete Project diagram
-![](files/tsai_emlov2-project_file.drawio.png)
-
-It can be downloaded from [here](files/tsai_emlov2-project_file.drawio.png)
