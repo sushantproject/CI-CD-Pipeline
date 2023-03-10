@@ -102,6 +102,7 @@ So, there are altogether 5 event bridge rules to complete the task:
 ### Deployment and Drift Detection - Online Drift detection
 I use online drift detection called `MMDDriftOnline`. Here is some important code is given below that helps to find drift statistics.
 Full code is available at [sagemaker-projectv1-intel-modelbuild/pipelines/intel/scripts/infer.py](sagemaker-projectv1-intel-modelbuild/pipelines/intel/scripts/infer.py)
+
 ```python
 # ...
 from alibi_detect.cd import MMDDriftOnline
@@ -115,6 +116,7 @@ idx_to_class = {
 }
 
 dd = MMDDriftOnline(x_ref, ERT, W, backend='pytorch')
+
 # ....
 # inference
 def predict_fn(input_object, model):
