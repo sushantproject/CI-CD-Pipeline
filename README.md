@@ -6,7 +6,7 @@
 
 ![](files/sagemaker_model_deploy.png)
 
-**Evaluation Logs**
+**Evaluation Logs** 
 ```json
 
 {"multiclass_classification_metrics": {"accuracy": {"value": 0.9056666493415833, "standard_deviation": "0"}, "confusion_matrix": {"buildings": 24.94279146194458, "forest": 33.122363686561584, "glacier": 31.28390610218048, "mountain": 28.57142984867096, "sea": 31.568628549575806, "street": 31.736525893211365}}}
